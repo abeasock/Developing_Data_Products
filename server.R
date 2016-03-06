@@ -3,7 +3,7 @@
 # server.R file for the shiny app
 
 library(shiny)
-library(dplyr)
+library(markdown)
 
 shinyServer(
   function(input, output) {

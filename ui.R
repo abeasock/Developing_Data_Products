@@ -3,7 +3,6 @@
 # ui.R file for the shiny app
 
 library(shiny)
-library(dplyr)
 library(BH)
 library(markdown)
 
@@ -43,7 +42,7 @@ shinyUI(fluidPage(
                 HTML('<br>')
               ),
       tabPanel("Table", dataTableOutput("table")),
-      tabPanel("Documentation", includeMarkdown("documentation.md"))
+      tabPanel("Documentation", includeMarkdown("Documentation.md"))
     )
   )
 ))

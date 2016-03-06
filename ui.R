@@ -2,11 +2,13 @@
 
 # ui.R file for the shiny app
 
+# This app was developed to help users select a wine
+
 library(shiny)
 library(markdown)
 
-# Read in data
-wine <- na.omit(read.csv("wine_reviews.csv")) #Read in data & remove NAs
+# Read in data & remove NAs
+wine <- na.omit(read.csv("wine_reviews.csv")) 
 
 varietal <- table(wine$varietal)
 region <- table(wine$region)

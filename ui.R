@@ -3,7 +3,6 @@
 # ui.R file for the shiny app
 
 library(shiny)
-library(BH)
 library(markdown)
 
 # Read in data

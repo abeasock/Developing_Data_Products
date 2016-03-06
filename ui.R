@@ -5,6 +5,7 @@
 library(shiny)
 library(dplyr)
 library(BH)
+library(markdown)
 
 # Read in data
 wine <- na.omit(read.csv("wine_reviews.csv")) #Read in data & remove NAs

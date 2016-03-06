@@ -13,6 +13,8 @@ This information is used to make two calculates:
 1. An average price of the selected wine type in the selected region 
 2. The average points of the selected wine type in the selected region within the selected price range
 
+**Important Note**: If either of the calculations render "No Matches", please select different criteria.
+
 It also provides a table of wines filtered by the user's selected criteria. 
 The variables included in this table:
 

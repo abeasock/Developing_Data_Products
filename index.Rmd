@@ -1,0 +1,52 @@
+---
+title       : Developing Data Products - Course Project
+subtitle    : Wine Finder Shiny App
+author      : Amber Beasock
+job         : 
+framework   : revealjs   # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : White    # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Developing Data Products
+## Course Project 
+### Wine Finder Shiny App
+Amber Beasock <br>
+06MAR2016
+
+---
+
+## Summary
+This presentation is the second part of the course project for the Coursera Developing Data Products course. The first part of the project was to develop a shiny application and deploy it on Rstudio's shiny server. The second part was to create a reproducible pitch presentation using Slidify or Rstudio Presenter and push the presentation to GitHub or Rpubs. <br> <br>
+
+--- 
+
+## The Shiny Application
+An application called Wine Finder has been developed to help a user select a wine, using data collected from a leading wine source for ratings and reviews. <br> <br>
+
+The shiny app developed for the first part of the assignment: [add link] <br>
+Source code for ui.R and server.R files on my GitHub [add link] 
+
+---
+
+## What the App does
+The user must select a wine type, region, and price range, and then hit "Submit". This information is used to calculate an average price of the selected wine type in the selected region and the average points of the selected wine type in the selected region within the selected price range. It also provides a table of wines filtered by the user's selected criteria. The variables included in this table are varietal, title, excerpt, points, price, location, and region. The table can be sorted according to any variable by clicking the arrows at the top of the table.  
+
+---
+
+## The Data
+
+The data was extracted from a leading wine website for ratings and reviews. Data was collected for four wine varietals (types): Cabernet Sauvignon, Chardonnay, Riesling, and Zinfandel. <br>
+<br>
+
+```{r}
+# The title and excerpt columns are excluded due to 
+# limited space on slide
+wine <- read.csv("wine_reviews.csv")[,c('varietal','region',
+                                        'location','price','points')]
+wine[sample(nrow(wine),5), ] # Random 5 rows to show variety
+```
+
